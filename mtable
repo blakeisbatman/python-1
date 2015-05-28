@@ -1,0 +1,19 @@
+#!/usr/bin/env python3
+
+import colors as c
+
+c.clear_screen()
+
+print(c.red + 'Mmmmmmmmm, multiplicaton tables' + c.clear)
+
+number = input('Which number? ')
+
+print(c.green + 'Okay, here are the tabels for ' + number)
+
+
+
+for m in range(1,13):
+    print(m)
+    product = int(number) * m
+    form = '{} x {} = {}'
+    print(form.format(number,m,product))

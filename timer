@@ -9,17 +9,11 @@ minutes = 0
 hours = 0
 days = 0
 weeks = 0
-months = 0
 
 
 
-
-
-try:
     while True:
     print(c.clear)
-    print(c.red + 'Months' + c.reset, end=': ') 
-    print(months)
     print(c.orange + 'Weeks' + c.reset, end=': ')
     print(weeks)
     print(c.yellow + 'Days' + c.reset, end=': ')
@@ -43,6 +37,15 @@ try:
     if minutes == 60:
         hours += 1
         minutes = 0
-     
-except:
-    exit()
+    if hours == 60:
+       minutes += 60 
+       hours = 1
+    if days == 24:
+       hours += 24
+       days = 1
+    if weeks == 7:
+       days += 7
+       weeks = 1
+       
+
+
