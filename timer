@@ -9,25 +9,21 @@ minutes = 0
 hours = 0
 days = 0
 weeks = 0
-
-
-
+print(clear)
+try:
     while True:
-    print(c.clear)
-    print(c.orange + 'Weeks' + c.reset, end=': ')
-    print(weeks)
-    print(c.yellow + 'Days' + c.reset, end=': ')
-    print(days)
-    print(c.green + 'Hours' + c.reset, end=': ')
-    print(hours)
-    print(c.cyan + 'Minutes' + c.reset, end=': ')
-    print(minutes)
-    print(c.blue + 'Seconds' + c.reset, end=': ')
-    print(seconds)
-    print(c.magenta + 'Hundredths' + c.reset, end=': ')
-    print(hundredths)
-    time.sleep(0.01)
-    hundredths += 1
+        timer.sleep(0.01)
+        print(clear)
+        print(c.green + ' {} weeks {} days {}:{}:{}.{}'.format(weeks,days,hours,minutes,seconds,hundredths))
+        '''
+        print('minutes')
+        print(minutes)
+        print('seconds:')
+        print(seconds)
+        print('hundredths:')
+        print(hundredths)
+        '''
+    hundredths +=1
     if hundredths == 100:
         seconds += 1
         hundredths = 0
@@ -46,6 +42,5 @@ weeks = 0
     if weeks == 7:
        days += 7
        weeks = 1
-       
 
 
