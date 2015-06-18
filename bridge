@@ -2,17 +2,48 @@
 
 import colors as c
 
+def live():
+    print(c.yellow + 'Right, off you go!')
+
+def die():
+    print(c.green + 'Tho art cast into the Gourge Of Eternal Peril')
+
+
+def ask(question):
+    print(c.red + question + c.reset)
+    answer = input("> " + c.base3).lower().strip()
+    print(c.reset)
+    return answer
+
 print(c.clear)
 print(c.yellow + '''Who would cross the bridge of Death Must
 answer me these questions three
 'Ere the other side he see''' + c.reset)
 
-name = input(c.green + 'what is your name? >')
-
-
-answer1 = input(c.red + 'What is your quest? >')
-
+name = ask(c.green + 'what is your name? ')
+quest = ask(c.red + 'What is your quest? ')
 
 if name in ['lancelot','galahad']:
-    color = input(c.blue + 'What is your favorite color? > ')
+    color = ask(c.blue + 'What is your favorite color?  ')
+    if color == 'blue':
+        live()
+    else:
+        die()
+
+elif name == 'robin':
+    capital = ask('What is the capital of Assyria?')
+    if capital in ['assur']:
+        live()
+    else:
+        die() 
+
+elif name == 'arthur':
+    speed = ask('What is the airspeed of an unladen swallow?')
+    if speed in ['24']:
+        live()
+    else:
+        die()
+
+
+
 

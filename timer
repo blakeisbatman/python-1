@@ -9,11 +9,11 @@ minutes = 0
 hours = 0
 days = 0
 weeks = 0
-print(clear)
+print(c.clear)
 try:
     while True:
-        timer.sleep(0.01)
-        print(clear)
+        time.sleep(0.01)
+        print(c.clear)
         print(c.green + ' {} weeks {} days {}:{}:{}.{}'.format(weeks,days,hours,minutes,seconds,hundredths))
         '''
         print('minutes')
@@ -23,7 +23,7 @@ try:
         print('hundredths:')
         print(hundredths)
         '''
-    hundredths +=1
+
     if hundredths == 100:
         seconds += 1
         hundredths = 0
@@ -42,5 +42,9 @@ try:
     if weeks == 7:
        days += 7
        weeks = 1
+
+except KeyboardInterrupt:
+    exit()
+
 
 
