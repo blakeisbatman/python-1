@@ -6,7 +6,7 @@ from utils import ask
 print(c.clear + c.green + 'Welcome to Mad Libs')
 
 text = '''
-I enjoy women in the fomrm of a {adj1} snake, smelling others faces and getting
+I enjoy women in the fomrm of a {adjective} snake, smelling others faces and getting
 {verb ending in -ed}. I really like eating {a famous person} with {a liquid}, and
 a romantic,candle-lit {plural noun}. I start to cry when
 I look at {your name}. I love to canibalize on others {an animal}. I love to meow 
@@ -15,10 +15,10 @@ at {an object}. I RLY RLY RLY HATE when i cry nuclear warfares out of my
 My most fav thing to do is {a hobby}.
 '''
 
-print(text)
+
 
 words = {
-    'adj1' : None,
+    'adjective' : None,
     'verb ending in -ed' : None,
     'a famous person' : None,
     'a liquid' : None,
