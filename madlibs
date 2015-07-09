@@ -1,0 +1,55 @@
+#!/usr/bin/env python3
+
+import colors as c
+from utils import ask
+
+print(c.clear + c.green + 'Welcome to Mad Libs')
+
+text = '''
+I enjoy women in the fomrm of a {adj1} snake, smelling others faces and getting
+{verb ending in -ed}. I really like eating {a famous person} with {a liquid}, and
+a romantic,candle-lit {plural noun}. I start to cry when
+I look at {your name}. I love to canibalize on others {an animal}. I love to meow 
+at {an object}. I RLY RLY RLY HATE when i cry nuclear warfares out of my
+{a body part}. One time I was about to be stabbed and eaten by {an evil person}.
+My most fav thing to do is {a hobby}.
+'''
+
+print(text)
+
+words = {
+    'adj1' : None,
+    'verb ending in -ed' : None,
+    'a famous person' : None,
+    'a liquid' : None,
+    'plural noun' : None,
+    'your name' : None,
+    'an animal' : None,
+    'an object' : None,
+    'a body part' : None, 
+    'an evil person' : None,
+    'a hobby' : None,
+}
+
+for keyword in words:
+    answer = ask(keyword + ': ')
+    words[keyword] = answer
+
+print(c.clear + text.format(**words))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
