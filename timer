@@ -2,49 +2,42 @@
 
 import colors as c
 import time
+import math
 
-seconds = 0
-hundredths = 0
-minutes = 0
-hours = 0
-days = 0
-weeks = 0
-print(c.clear)
+interval = 0.01
+
+short_form = c.base3 + '{}w {}d {}:{02}:{:05.2f}' + c.reset
+
+long_form = c.red      + 'weeks:   ' + c.base3 +'{}/n'
+long_form += c.orange  + 'days:    ' + c.base3 + '{}/n'
+long_form += c.green   + 'hours:   ' + c.base3 + '{]/n' 
+long_form += c.blue    + 'minutes: ' + c.base3 + '{]/n'
+long_form += c.magenta + 'seconds: ' + c.base3 + '{]/n'
+
+default_form = short_form
+end_form = short_form
+
+def since(started):
+    elapsed = time.time() - started  
+    weeks = math.floor(elapsed / 604800)        
+    remainder = elapsed % 604800
+    days = math.floor(remainder / 86400)        
+    remainder = remainder % 86400
+    hours = math.floor(remainder / 3600)         
+    remainder = remainder % 3600
+    minutes = math.floor(remainder / 60)
+    seconds = remainder % 60
+    return (seconds,minutes,hours,days,weeks)
+
+def show_since(started,form=default_form):
+    (seconds,minutes,hours,days,weeks) = since(started)
+    print(c.clear + form.format(weeks,days,hours,minutes,seconds))
+
 try:
+    began = time.time()
     while True:
-        time.sleep(0.01)
-        print(c.clear)
-        print(c.green + ' {} weeks {} days {}:{}:{}.{}'.format(weeks,days,hours,minutes,seconds,hundredths))
-        '''
-        print('minutes')
-        print(minutes)
-        print('seconds:')
-        print(seconds)
-        print('hundredths:')
-        print(hundredths)
-        '''
-
-    if hundredths == 100:
-        seconds += 1
-        hundredths = 0
-    if seconds == 60:
-        minutes += 1
-        seconds = 0
-    if minutes == 60:
-        hours += 1
-        minutes = 0
-    if hours == 60:
-       minutes += 60 
-       hours = 1
-    if days == 24:
-       hours += 24
-       days = 1
-    if weeks == 7:
-       days += 7
-       weeks = 1
-
+        show_since(began)
+        time.sleep(interval)
 except KeyboardInterrupt:
+    show_since(began,end_form)
     exit()
-
-
-

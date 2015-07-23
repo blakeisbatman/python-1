@@ -1,7 +1,10 @@
 #!/usr/bin/env python3
 import colors as c
 
+print(c.clear)
+
+print(c.green + 'Welcome to Blakes Note Pad!')
+
+print(c.red + '#!/usr/bin/env python3')
 
 
-while True:
-    print(c.blue + 'Skil' + c.magenta + 'Stak' + c.orange + 'Rocks!'   ,end='')

@@ -3,26 +3,31 @@
 import colors as c
 from utils import ask
 
-print(c.clear + c.green + 'Welcome to Mad Libs')
+print(c.clear + c.green + 'Welcome to Blakes Mad Libs')
 
-text = '''
-I enjoy women in the fomrm of a {adjective} snake, smelling others faces and getting
-{verb ending in -ed}. I really like eating {a famous person} with {a liquid}, and
-a romantic,candle-lit {plural noun}. I start to cry when
+text = '''Blake's Mad Lib
+
+I enjoy people in the fomrm of a {adjective} snake, smelling others faces and getting
+{verb ending in -ed}. I really like stabbing {a famous person} then putting him/her in {a liquid}, and
+a romantic, candle-lit {something that smells bad}. I start to cry when
 I look at {your name}. I love to canibalize on others {an animal}. I love to meow 
-at {an object}. I RLY RLY RLY HATE when i cry nuclear warfares out of my
+at a(n) {an object}. I RLY RLY RLY HATE when i cry nuclear warfares out of my
 {a body part}. One time I was about to be stabbed and eaten by {an evil person}.
 My most fav thing to do is {a hobby}.
 '''
 
-
+lines = text.splitlines()
+title = lines[0]
+text = "\n".join(lines[1:])
+   
+print(title)
 
 words = {
     'adjective' : None,
     'verb ending in -ed' : None,
     'a famous person' : None,
     'a liquid' : None,
-    'plural noun' : None,
+    'something that smells bad' : None,
     'your name' : None,
     'an animal' : None,
     'an object' : None,
@@ -32,10 +37,11 @@ words = {
 }
 
 for keyword in words:
-    answer = ask(keyword + ': ')
+    answer = c.magenta + ask(keyword + ': ') + c.reset
     words[keyword] = answer
 
-print(c.clear + text.format(**words))
+print(c.clear + c.base3 + title + c.reset)
+print(text.format(**words))
 
 
 
