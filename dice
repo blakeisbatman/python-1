@@ -79,5 +79,6 @@ import random
 while True:
     side = random.choice(sides)
     print(c.clear + c.random_color() + side + c.reset)
-   #input()
+    input()
+
 
