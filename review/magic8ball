@@ -1,0 +1,47 @@
+#!/usr/bin/env python3
+
+import colors as c
+import random
+print(c.clear)
+
+
+print(c.yellow + 'Welcome To The Magic8Ball!')
+print(c.violet + 'Please Type Your Question')
+
+shake = input(c.orange + ' -----> ')
+
+if shake == 'yes':
+    print(c.clear)
+
+elif shake == 'no':
+    exit()
+
+
+sides = []
+
+sides.append('''
+yes
+''')
+
+sides.append('''
+no
+''')
+
+sides.append('''
+RUN! SHADOW BONNIE IS BEHIND YOU!!!
+''')
+
+sides.append('''
+maybe
+''')
+
+sides.append('''
+ask again later
+''')
+
+r = random.choice(sides)
+
+print(c.green + r)
+
+
+

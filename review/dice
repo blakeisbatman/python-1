@@ -1,0 +1,90 @@
+#!/usr/bin/env python3
+
+import colors as c
+print(c.clear)
+import random
+
+sides = []
+
+sides.append('''
+  --------
+ |        |
+ |   1    |
+ |        |
+  --------
+''')
+
+sides.append('''
+  --------
+ |        |
+ |   2    |
+ |        |
+  --------
+''')
+
+sides.append('''
+  --------
+ |        |
+ |   3    |
+ |        |
+  --------
+''')
+
+sides.append('''
+  --------
+ |        |
+ |   4    |
+ |        |
+  --------
+''')
+
+sides.append('''
+  --------
+ |        |
+ |   5    |
+ |        |
+  --------
+''')
+
+sides.append('''
+  --------
+ |        |
+ |   6    |
+ |        |
+  --------
+''')
+
+print(random.choice(sides))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

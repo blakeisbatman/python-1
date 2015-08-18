@@ -4,4 +4,4 @@ import colors as c
 
 
 while True:
-    print(c.magenta + 'Rainbow' + c.red + 'Rainbow' + c.orange + 'Rainbow' + c.yellow + 'Rainbow' + c.green + 'Rainbow' + c.cyan + 'Rainbow' + c.blue + 'Rainbow' + c.violet + 'Rainbow'    ,end='')
+    print(c.magenta + 'Rainbow' + c.red + 'Rainbow' + c.orange + 'Rainbow' + c.yellow + 'Rainbow' + c.green + 'Rainbow' + c.cyan + 'Rainbow' + c.blue + 'Rainbow' + c.violet + 'Rainbow'    ,end='S U P E R   A W E S O M E    M E G A    H A P P Y   F U N   T I M E   YESSSS!!!!!! ')
