@@ -2,31 +2,44 @@
 
 import colors as c
 
+def die():
+    print(c.red + 'YOU ARE CAST INTO THE GORGE OF INTERNAL PERRIL!!!')
+    exit()
+
 print(c.clear)
 print(c.green + 'Who dares cross the bridge of death!?')
 
 name1 = input(c.red + 'What is your name? --> ')
-    
-    if name == 'lancelot':
-     quest1 = input(c.yellow + 'What is your quest? --> ')
+        
+if name1 == 'lancelot':
+    quest1 = input(c.yellow + 'What is your quest? --> ')
+else:
+    die()
     
     if quest1 == 'to find the holy grail':
         color1 = input(c.violet + ' What is your fav color? --> ')
+    else:
+        die()
 
-    if color 1 == 'blue':
-        print(c.clear)
-        print(c.cyan + 'Okay go ahead')
- 
- 
-name2 = input(c.yellow + 'What is your name? --> ')
-    if name == 'robin':
-        quest2 = input(c.pink + 'What is your quest? --> ')
+        if color1 == 'blue':
+            print(c.clear)
+            print(c.cyan + 'Okay go ahead')
+        else:
+            die()
+
+            name2 = input(c.yellow + 'What is your name? --> ')
+            if name == 'robin':
+                quest2 = input(c.pink + 'What is your quest? --> ')
    
-    if quest2 == 'to find the holy grail':
-        b1 = input(c.red + 'What is the capital of Asyria --> ')
-  
-    if b1 == else:
-        print(c.green + 'YOU DID NOT PASS!!!') 
+                
+
+
+            if quest2 == 'to find the holy grail':
+                b1 = input(c.red + 'What is the capital of Asyria --> ')
+                print(c.red + 'YOU DID NOT PASS') 
+    
+
+
 
 
     
